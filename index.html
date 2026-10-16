@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#100e24">
+  <meta name="description" content="A little love for Toey, written in languages from around the world.">
+  <title>I love Toey — around the world</title>
+  <style>
+    :root{color-scheme:dark;--ink:#fff9f6;--muted:#c8bfd9;--pink:#ff83b5;--peach:#ffc29d;--violet:#b7a0ff;--glass:rgba(255,255,255,.075);--line:rgba(255,255,255,.15)}
+    *{box-sizing:border-box}html{min-height:100%;background:#100e24}body{margin:0;min-height:100svh;overflow-x:hidden;color:var(--ink);font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse at 52% 36%,#332044 0,#1b1733 38%,#100e24 74%);}
+    button{font:inherit;color:inherit}.sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.45;animation:float 12s ease-in-out infinite}.orb.one{width:230px;height:230px;top:-80px;left:-60px;background:radial-gradient(circle at 40% 60%,#ff7aa7,transparent 70%)}.orb.two{width:300px;height:300px;right:-120px;top:24%;background:radial-gradient(circle at 50%,#8864e8,transparent 68%);animation-delay:-4s}.orb.three{width:210px;height:210px;bottom:-100px;left:26%;background:radial-gradient(circle at center,#f4a773,transparent 70%);animation-delay:-8s}.grain{position:absolute;inset:0;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+    main{position:relative;z-index:1;min-height:100svh;display:grid;place-items:center;padding:max(24px,env(safe-area-inset-top)) 18px max(22px,env(safe-area-inset-bottom))}.page{width:min(100%,520px);text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#f4d1e0;text-transform:uppercase;letter-spacing:.2em;font-size:10px;font-weight:750}.eyebrow:before,.eyebrow:after{content:"";height:1px;width:22px;background:linear-gradient(90deg,transparent,#ffc29d)}.eyebrow:after{transform:rotate(180deg)}h1{font-size:clamp(30px,8vw,46px);line-height:1.06;letter-spacing:-.045em;margin:16px 0 8px;font-weight:760}.subtitle{margin:0;color:var(--muted);font-size:14px;letter-spacing:.015em}.subtitle strong{color:#ffe3ee;font-weight:650}
+    .stage{position:relative;margin:34px auto 22px;width:min(100%,430px);min-height:282px;display:grid;place-items:center;isolation:isolate}.halo{position:absolute;width:230px;height:230px;border-radius:50%;background:linear-gradient(135deg,rgba(255,131,181,.24),rgba(183,160,255,.16));filter:blur(24px);animation:breathe 4s ease-in-out infinite;z-index:-1}.card{width:100%;min-height:260px;border:1px solid var(--line);border-radius:30px;padding:30px 20px 25px;background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.035));box-shadow:0 28px 80px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(18px);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(145deg,rgba(255,194,157,.52),transparent 35%,rgba(183,160,255,.3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}.card:after{content:"";position:absolute;width:180%;height:80px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.075),transparent);transform:rotate(-22deg) translateY(-165px);animation:shimmer 7s ease-in-out infinite;pointer-events:none}.heart-wrap{height:60px;display:grid;place-items:center;margin-bottom:12px;position:relative}.heart{font-size:44px;line-height:1;filter:drop-shadow(0 5px 18px rgba(255,97,156,.38));animation:heartbeat 1.8s ease-in-out infinite}.heart:after{content:"";position:absolute;width:58px;height:58px;border:1px solid rgba(255,175,202,.35);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);animation:ripple 2.4s ease-out infinite}.message{font-size:clamp(30px,8.4vw,48px);font-weight:760;letter-spacing:-.055em;line-height:1.14;margin:0;max-width:100%;text-wrap:balance;text-shadow:0 4px 28px rgba(255,131,181,.12);transition:opacity var(--message-transition,240ms),transform var(--message-transition,240ms)}.message.swap{opacity:0;transform:translateY(9px) scale(.98)}.language{margin-top:13px;color:#ead7e9;font-size:13px;letter-spacing:.06em}.script-note{min-height:18px;margin-top:6px;color:#b7aeca;font-size:11px}
+    .controls{display:flex;justify-content:center;align-items:center;gap:12px;margin:6px auto 18px}.icon-btn{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.065);display:grid;place-items:center;cursor:pointer;transition:transform .2s,background .2s,border-color .2s;touch-action:manipulation}.icon-btn:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.33);transform:translateY(-2px)}.icon-btn:active{transform:scale(.94)}.icon-btn svg{width:18px;height:18px}.icon-btn.primary{width:54px;height:54px;color:#30142b;border:0;background:linear-gradient(135deg,#ffd1b6,#ff88b7 65%,#d7b2ff);box-shadow:0 8px 26px rgba(255,131,181,.24)}.counter{font-variant-numeric:tabular-nums;color:#d4c8de;font-size:12px;min-width:54px}.counter b{color:white;font-weight:650}.languages{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;max-width:420px;margin:0 auto}.chip{padding:8px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035);color:#c7bdd4;font-size:11px;cursor:pointer;transition:all .2s;touch-action:manipulation}.chip:hover,.chip[aria-current="true"]{color:#fff2f7;border-color:rgba(255,171,202,.48);background:rgba(255,131,181,.13)}.foot{margin-top:26px;color:#9188a8;font-size:11px;letter-spacing:.035em}.foot span{color:#ff9dbf}
+    button:focus-visible{outline:2px solid #ffd0e2;outline-offset:3px}@keyframes heartbeat{0%,100%{transform:scale(1)}8%{transform:scale(1.13)}16%{transform:scale(1)}24%{transform:scale(1.08)}34%{transform:scale(1)}}@keyframes ripple{0%{opacity:.7;transform:translate(-50%,-50%) scale(.65)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.6)}}@keyframes breathe{0%,100%{transform:scale(.85);opacity:.6}50%{transform:scale(1.14);opacity:1}}@keyframes float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(12px,-20px,0)}}@keyframes shimmer{0%,65%,100%{transform:rotate(-22deg) translateY(-165px)}82%{transform:rotate(-22deg) translateY(430px)}}
+    @media(min-width:600px){main{padding:38px}.stage{margin-top:38px}.card{min-height:286px;padding:36px}.stage{min-height:308px}.heart-wrap{margin-bottom:16px}}@media(max-height:730px){main{place-items:start center}.page{padding-top:4px}.stage{margin-top:20px;min-height:240px}.card{min-height:230px}.heart-wrap{height:48px}.heart{font-size:38px}.languages{gap:5px}.chip{padding:7px 10px}.foot{margin-top:17px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="sky" aria-hidden="true"><i class="orb one"></i><i class="orb two"></i><i class="orb three"></i><i class="grain"></i></div>
+  <main>
+    <section class="page" aria-label="A love note for Toey">
+      <div class="eyebrow">A little love, everywhere</div>
+      <h1>One heart.<br>Many languages.</h1>
+      <p class="subtitle">For <strong>Toey</strong> <span aria-hidden="true">·</span> <strong lang="th">ใบเตย</strong></p>
+      <div class="stage"><div class="halo"></div><article class="card" aria-live="polite" aria-atomic="true"><div class="heart-wrap" aria-hidden="true"><span class="heart">♥</span></div><p class="message" id="message">I love Toey</p><div class="language" id="language">English</div><div class="script-note" id="note">I love you with all my heart</div></article></div>
+      <div class="controls" aria-label="Language controls">
+        <button class="icon-btn" id="prev" type="button" aria-label="Previous language" title="Previous language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+        <button class="icon-btn primary" id="play" type="button" aria-label="Pause animation" title="Pause"><svg id="playIcon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5h3v14H8zm5 0h3v14h-3z"/></svg></button>
+        <button class="icon-btn" id="next" type="button" aria-label="Next language" title="Next language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        <span class="counter" aria-live="polite"><b id="current">01</b> / <span id="total">30</span></span>
+      </div>
+      <nav class="languages" id="languages" aria-label="Choose a language"></nav>
+      <p class="foot">Made with <span>♥</span>, just for Toey</p>
+    </section>
+  </main>
+  <script>
+    // Quick settings — adjust these values to tune the slideshow.
+    const CONFIG = {
+      autoAdvanceMs: 5000,       // time on each language card
+      messageTransitionMs: 240,  // fade duration when the message changes
+      swipeThresholdPx: 45       // minimum swipe distance to change language
+    };
+    document.documentElement.style.setProperty('--message-transition', `${CONFIG.messageTransitionMs}ms`);
+    const notes = [
+      {name:'English', text:'I love Toey', note:'I love you with all my heart', lang:'en'},
+      {name:'ไทย · Thai', text:'ฉันรักใบเตย', note:'รักเธอหมดทั้งหัวใจ', lang:'th'},
+      {name:'Español · Spanish', text:'Te quiero, Toey', note:'Te quiero con todo mi corazón', lang:'es'},
+      {name:'Français · French', text:'Je t’aime, Toey', note:'Je t’aime de tout mon cœur', lang:'fr'},
+      {name:'日本語 · Japanese', text:'トーイ、愛してる', note:'心から愛してる', lang:'ja'},
+      {name:'한국어 · Korean', text:'토이야, 사랑해', note:'진심으로 사랑해', lang:'ko'},
+      {name:'中文 · Chinese', text:'我爱你，托伊', note:'我全心全意地爱你', lang:'zh'},
+      {name:'Português · Portuguese', text:'Eu te amo, Toey', note:'Eu te amo de todo o meu coração', lang:'pt'},
+      {name:'Deutsch · German', text:'Ich liebe dich, Toey', note:'Ich liebe dich von ganzem Herzen', lang:'de'},
+      {name:'Italiano · Italian', text:'Ti amo, Toey', note:'Ti amo con tutto il cuore', lang:'it'},
+      {name:'Русский · Russian', text:'Я люблю тебя, Той', note:'Я люблю тебя всем сердцем', lang:'ru'},
+      {name:'हिन्दी · Hindi', text:'टोय, मुझे तुमसे प्यार है', note:'मैं तुम्हें पूरे दिल से प्यार करता/करती हूँ', lang:'hi'},
+      {name:'العربية · Arabic', text:'أحبك يا توي', note:'أحبك بكل قلبي', lang:'ar'},
+      {name:'Tiếng Việt · Vietnamese', text:'Tôi yêu Toey', note:'Yêu em bằng cả trái tim', lang:'vi'},
+      {name:'Bahasa Indonesia · Indonesian', text:'Aku cinta kamu, Toey', note:'Aku mencintaimu sepenuh hati', lang:'id'},
+      {name:'Bahasa Melayu · Malay', text:'Saya sayang Toey', note:'Saya sayang awak sepenuh hati', lang:'ms'},
+      {name:'Filipino · Tagalog', text:'Mahal kita, Toey', note:'Mahal kita nang buong puso', lang:'fil'},
+      {name:'မြန်မာ · Burmese', text:'တိုအိကို ချစ်တယ်', note:'မင်းကို စိတ်နှလုံးအကြွင်းမဲ့ ချစ်တယ်', lang:'my'},
+      {name:'ខ្មែរ · Khmer', text:'ខ្ញុំស្រឡាញ់ តូយ', note:'ខ្ញុំស្រឡាញ់អ្នកអស់ពីបេះដូង', lang:'km'},
+      {name:'ລາວ · Lao', text:'ຂ້ອຍຮັກໃບເຕີຍ', note:'ຂ້ອຍຮັກເຈົ້າດ້ວຍສຸດຫົວໃຈ', lang:'lo'},
+      {name:'Türkçe · Turkish', text:'Seni seviyorum, Toey', note:'Seni bütün kalbimle seviyorum', lang:'tr'},
+      {name:'Kiswahili · Swahili', text:'Nakupenda, Toey', note:'Nakupenda kwa moyo wangu wote', lang:'sw'},
+      {name:'Ελληνικά · Greek', text:'Σ’ αγαπώ, Τόι', note:'Σ’ αγαπώ με όλη μου την καρδιά', lang:'el'},
+      {name:'Nederlands · Dutch', text:'Ik hou van je, Toey', note:'Ik hou met heel mijn hart van je', lang:'nl'},
+      {name:'Svenska · Swedish', text:'Jag älskar dig, Toey', note:'Jag älskar dig av hela mitt hjärta', lang:'sv'},
+      {name:'Polski · Polish', text:'Kocham cię, Toey', note:'Kocham cię całym sercem', lang:'pl'},
+      {name:'עברית · Hebrew', text:'אני אוהב אותך, טוי', note:'אני אוהב אותך בכל ליבי', lang:'he'},
+      {name:'فارسی · Persian', text:'دوستت دارم، توی', note:'با تمام قلبم دوستت دارم', lang:'fa'},
+      {name:'اردو · Urdu', text:'مجھے تم سے محبت ہے، ٹوئی', note:'میں تم سے دل و جان سے محبت کرتا ہوں', lang:'ur'},
+      {name:'தமிழ் · Tamil', text:'நான் உன்னை காதலிக்கிறேன், டோய்', note:'நான் உன்னை முழு மனதுடன் காதலிக்கிறேன்', lang:'ta'}
+    ];
+    let index=0, playing=true, timer, renderTimer;
+    const $=id=>document.getElementById(id), message=$('message'), language=$('language'), note=$('note'), current=$('current'), nav=$('languages');
+    $('total').textContent=String(notes.length).padStart(2,'0');
+    function render(){const item=notes[index];const itemIndex=index;const rtl=['ar','he','fa','ur'].includes(item.lang);clearTimeout(renderTimer);message.classList.add('swap');renderTimer=window.setTimeout(()=>{message.textContent=item.text;message.lang=item.lang;message.dir=rtl?'rtl':'auto';language.textContent=item.name;language.lang=item.lang;language.dir='auto';note.textContent=item.note;note.dir=rtl?'rtl':'auto';note.lang=item.lang;current.textContent=String(itemIndex+1).padStart(2,'0');message.classList.remove('swap');nav.querySelectorAll('button').forEach((b,i)=>{if(i===itemIndex)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current')})},CONFIG.messageTransitionMs/2)}
+    function go(n){index=(n+notes.length)%notes.length;render();if(playing)start()}
+    notes.forEach((item,i)=>{const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=item.name.split(' · ')[0];b.setAttribute('aria-label',`Show ${item.name}`);b.addEventListener('click',()=>go(i));nav.appendChild(b)});
+    function start(){clearTimeout(timer);timer=setTimeout(()=>go(index+1),CONFIG.autoAdvanceMs)}
+    function toggle(){playing=!playing;$('play').setAttribute('aria-label',playing?'Pause animation':'Play animation');$('play').title=playing?'Pause':'Play';$('playIcon').innerHTML=playing?'<path d="M8 5h3v14H8zm5 0h3v14h-3z"/>':'<path d="M8 5v14l11-7z"/>';playing?start():clearTimeout(timer)}
+    $('prev').addEventListener('click',()=>go(index-1));$('next').addEventListener('click',()=>go(index+1));$('play').addEventListener('click',toggle);
+    let touchX=0;document.querySelector('.card').addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});document.querySelector('.card').addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>CONFIG.swipeThresholdPx)go(index+(dx<0?1:-1))},{passive:true});
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){playing=false;$('play').setAttribute('aria-label','Play animation');$('play').title='Play';$('playIcon').innerHTML='<path d="M8 5v14l11-7z"/>'}else start();
+  </script>
+</body>
+</html>
