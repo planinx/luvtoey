@@ -1,2 +1,2 @@
 # luvtoey.github.io
-luvtoey
+https://planinx.github.io/luvtoey
